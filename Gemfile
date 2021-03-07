@@ -11,6 +11,8 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'figaro', '~> 1.2'
+gem 'faker', '~> 1.6', '>= 1.6.6'
+gem 'will_paginate-materialize', git: 'https://github.com/mldoscar/will_paginate-materialize', branch: 'master'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 

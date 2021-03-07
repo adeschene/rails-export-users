@@ -1,2 +1,30 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<div class="container center-align">
+  <table class="centered">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone Number</th>
+        <th>Full Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= user.phone %></td>
+          <td><%= user.address %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="container">
+    <%= will_paginate @users %>
+  </div>
+  <div class="container">
+    <%= link_to users_path + '.csv', class: 'btn waves-effect waves-light' do %>
+      Export CSV<i class="material-icons right">file_download</i>
+    <% end %>
+  </div>
+</div>
